@@ -1,0 +1,224 @@
+object Form1: TForm1
+  Left = 765
+  Height = 703
+  Top = 224
+  Width = 987
+  Caption = 'Bordereaux des épreuves de BAC général'
+  ClientHeight = 703
+  ClientWidth = 987
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 192
+    Top = 0
+    Width = 987
+    Align = alTop
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 0
+    Height = 25
+    Top = 192
+    Width = 208
+    Caption = 'Chercher les établissements'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 312
+    Height = 20
+    Top = 224
+    Width = 42
+    Caption = 'Label1'
+    ParentColor = False
+    Visible = False
+  end
+  object CBEtab: TComboBox
+    Left = 0
+    Height = 36
+    Top = 216
+    Width = 296
+    ItemHeight = 0
+    OnChange = CBEtabChange
+    Style = csDropDownList
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn
+    Left = 0
+    Height = 30
+    Top = 256
+    Width = 184
+    Caption = 'Chercher les commissions'
+    OnClick = BitBtn1Click
+    TabOrder = 3
+  end
+  object CBCommission: TComboBox
+    Left = 0
+    Height = 37
+    Top = 280
+    Width = 296
+    ItemHeight = 0
+    OnChange = CBCommissionChange
+    TabOrder = 4
+    Text = 'Commission à éditer'
+  end
+  object Label2: TLabel
+    Left = 312
+    Height = 20
+    Top = 280
+    Width = 42
+    Caption = 'Label2'
+    ParentColor = False
+    Visible = False
+  end
+  object Label3: TLabel
+    Left = 312
+    Height = 20
+    Top = 320
+    Width = 42
+    Caption = 'Label3'
+    ParentColor = False
+    Visible = False
+  end
+  object Button2: TButton
+    Left = 616
+    Height = 25
+    Top = 232
+    Width = 144
+    Caption = 'Montrer le rapport'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object frPreview1: TfrPreview
+    Left = 0
+    Height = 311
+    Top = 392
+    Width = 987
+    Align = alBottom
+    BevelOuter = bvLowered
+    Caption = 'frPreview1'
+    ClientHeight = 311
+    ClientWidth = 987
+    TabOrder = 6
+    ScrollBars = ssBoth
+    object Memo1: TMemo
+      Left = 160
+      Height = 277
+      Top = 59
+      Width = 487
+      Lines.Strings = (
+        'Statistiques'
+        ''
+      )
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+    end
+  end
+  object Button3: TButton
+    Left = 616
+    Height = 41
+    Top = 256
+    Width = 283
+    Caption = 'Imprimer les rapports par commission'
+    OnClick = Button3Click
+    TabOrder = 7
+  end
+  object Button4: TButton
+    Left = 216
+    Height = 25
+    Top = 192
+    Width = 120
+    Caption = 'Choisir Paul Va'
+    OnClick = Button4Click
+    TabOrder = 8
+  end
+  object Button5: TButton
+    Left = 616
+    Height = 25
+    Top = 192
+    Width = 224
+    Caption = 'Activer la base de données'
+    OnClick = Button5Click
+    TabOrder = 9
+  end
+  object Button6: TButton
+    Left = 768
+    Height = 25
+    Top = 232
+    Width = 95
+    Caption = 'Statistiques'
+    OnClick = Button6Click
+    TabOrder = 10
+  end
+  object Button7: TButton
+    Left = 616
+    Height = 31
+    Top = 297
+    Width = 283
+    Caption = 'Imp. les rapports par série'
+    OnClick = Button7Click
+    TabOrder = 11
+  end
+  object ToggleBox1: TToggleBox
+    Left = 0
+    Height = 31
+    Top = 320
+    Width = 186
+    Caption = 'Chercher les séries'
+    OnChange = ToggleBox1Change
+    TabOrder = 12
+  end
+  object CBSerie: TComboBox
+    Left = 0
+    Height = 37
+    Top = 352
+    Width = 296
+    ItemHeight = 0
+    OnChange = CBSerieChange
+    TabOrder = 13
+    Text = 'CBSerie'
+  end
+  object DataSource1: TDataSource
+    DataSet = Dbf1
+    left = 296
+    top = 56
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Title = 'BAC2017'
+    left = 544
+    top = 216
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = Dbf1
+    OnCheckEOF = frDBDataSet1CheckEOF
+    left = 600
+    top = 216
+  end
+  object PrintDialog1: TPrintDialog
+    Title = 'Choisissez votre sortie'
+    FromPage = 1
+    Options = [poPrintToFile]
+    ToPage = 1
+    left = 512
+    top = 216
+  end
+  object Dbf1: TDbf
+    FilePath = '/home/pierre/Documents/BAC2018/'
+    IndexDefs = <>
+    TableName = 'EA Brassage.dbf'
+    TableLevel = 4
+    Active = True
+    FilterOptions = []
+    left = 240
+    top = 56
+  end
+end
