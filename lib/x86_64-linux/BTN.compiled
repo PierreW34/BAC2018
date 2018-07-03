@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1454539138"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fi/home/pierre/Documents/BAC2018/lib/x86_64-linux -Fl/opt/gnome/lib -Fu/home/pierre/Documents/lazreport/lib/x86_64-linux -Fu/usr/lib64/lazarus/components/tdbf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/printers/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/ideintf/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/synedit/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/cairocanvas/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/components/lazutils/lib/x86_64-linux -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu/home/pierre/Documents/BAC2018/ -FU/home/pierre/Documents/BAC2018/lib/x86_64-linux/ -dLCL -dLCLgtk2 BTN.lpr"/>
+</CONFIG>
